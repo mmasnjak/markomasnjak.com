@@ -12,11 +12,15 @@
   <!-- Place favicon.ico in the root directory -->
 
   <link rel="stylesheet" href="/static/css/normalize.css">
-  <link rel="stylesheet" href="/static/css/all.css">
+  <link rel="stylesheet" href="/static/css/main.css">
   <script src="//modernizr.com/downloads/modernizr-latest.js"></script>
 </head>
 
   <body class="<%= page_classes %>">
+    <!--[if lt IE 8]>
+      <div class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+    <![endif]-->
+
     <%= yield %>
 
     <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
