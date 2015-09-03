@@ -1,9 +1,6 @@
 [submodule "source/static/third-party/bower-foundation"]
 	path = source/static/third-party/bower-foundation
 	url = https://github.com/zurb/bower-foundation.git
-[submodule "foundation-apps"]
-	path = foundation-apps
-	url = https://github.com/zurb/foundation-apps.git
 [submodule "source/static/third-party/jribbble"]
 	path = source/static/third-party/jribbble
 	url = https://github.com/tylergaw/jribbble.git
