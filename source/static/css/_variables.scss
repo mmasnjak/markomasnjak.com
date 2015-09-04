@@ -1,22 +1,29 @@
 // COLORS ------------------------------------------------------------------------
 
 $color-interaction-tint: rgb(52, 170, 220);
-$color-primary: rgb(31, 31, 31);
-$color-error: rgb(255, 58, 45);
+$color-primary:          rgb(31, 31, 31);
+$color-error:            rgb(255, 58, 45);
 
-$color-UIGrey1: rgb(247, 247, 247);
-$color-UIGrey2: rgb(199, 199, 204);
-$color-UIGrey3: rgb(189, 190, 194);
-$color-UIGrey4: rgb(142, 142, 147);
+$color-UIGrey1:          rgb(247, 247, 247);
+$color-UIGrey2:          rgb(199, 199, 204);
+$color-UIGrey3:          rgb(189, 190, 194);
+$color-UIGrey4:          rgb(142, 142, 147);
 
 // TYPOGRAPHY --------------------------------------------------------------------
 
-$font-size-small: 1.0rem;
-$font-size-normal: 1.5rem;
-$font-size-medium: 2.25rem;
-$font-size-large: 3.375rem;
+$font-stack:             FFMark, Arial, sans-serif;
 
-$font-leading-normal: 1.5em;
+$font-size-small:        1.0rem;
+$font-size-normal:       1.5rem;
+$font-size-medium:       2.25rem;
+$font-size-large:        3.375rem;
+
+$font-leading-normal:    1.5em;
+
+$font-weight-light:      300;
+$font-weight-normal:     400;
+$font-weight-medium:     500;
+$font-weight-bold:       600;
 
 // BORDERS & SHADOWS -------------------------------------------------------------
 

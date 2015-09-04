@@ -1,11 +1,83 @@
+// FONT INCLUDES -----------------------------------------------------------------
+
+@font-face {
+	font-family: FFMark;
+	font-weight: 300;
+	font-style: normal;
+	src: url("../fonts/FF Mark/MarkWeb-Light.eot");
+	src: url("../fonts/FF Mark/MarkWeb-Light.woff") format("woff");
+}
+
+@font-face {
+	font-family: FFMark;
+	font-weight: 300;
+	font-style: italic;
+	src: url("../fonts/FF Mark/MarkWeb-LightItalic.eot");
+	src: url("../fonts/FF Mark/MarkWeb-LightItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: FFMark;
+	font-weight: 400;
+	font-style: normal;
+	src: url("../fonts/FF Mark/MarkWeb.eot");
+	src: url("../fonts/FF Mark/MarkWeb.woff") format("woff");
+}
+
+@font-face {
+	font-family: FFMark;
+	font-weight: 400;
+	font-style: italic;
+	src: url("../fonts/FF Mark/MarkWeb-Italic.eot");
+	src: url("../fonts/FF Mark/MarkWeb-Italic.woff") format("woff");
+}
+
+@font-face {
+	font-family: FFMark;
+	font-weight: 500;
+	font-style: normal;
+	src: url("../fonts/FF Mark/MarkWeb-Medium.eot");
+	src: url("../fonts/FF Mark/MarkWeb-Medium.woff") format("woff");
+}
+
+@font-face {
+	font-family: FFMark;
+	font-weight: 500;
+	font-style: italic;
+	src: url("../fonts/FF Mark/MarkWeb-MediumItalic.eot");
+	src: url("../fonts/FF Mark/MarkWeb-MediumItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: FFMark;
+	font-weight: 600;
+	font-style: normal;
+	src: url("../fonts/FF Mark/MarkWeb-Bold.eot");
+	src: url("../fonts/FF Mark/MarkWeb-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: FFMark;
+	font-weight: 600;
+	font-style: italic;
+	src: url("../fonts/FF Mark/MarkWeb-BoldItalic.eot");
+	src: url("../fonts/FF Mark/MarkWeb-BoldItalic.woff") format("woff");
+}
+
+
+// TYPE STYLES -------------------------------------------------------------------
+
 html, body {
   font-size: 10px;
+  font-family: $font-stack;
+  font-weight: $font-weight-normal;
   line-height: $font-leading-normal;
 }
 
 h1 {
   font-size: $font-size-large;
   line-height: $font-leading-normal;
+  font-weight: $font-weight-medium;
 }
 
 h2 {

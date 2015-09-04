@@ -4,3 +4,9 @@
 [submodule "source/static/third-party/jribbble"]
 	path = source/static/third-party/jribbble
 	url = https://github.com/tylergaw/jribbble.git
+[submodule "source/static/third-party/animate.css"]
+	path = source/static/third-party/animate.css
+	url = https://github.com/daneden/animate.css.git
+[submodule "source/static/third-party/hammer.js"]
+	path = source/static/third-party/hammer.js
+	url = https://github.com/hammerjs/hammer.js.git
