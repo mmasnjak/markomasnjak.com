@@ -15,4 +15,13 @@ $.jribbble.users('m_masnjak').shots({'per_page' : 4}).then(function(shots) {
 
       $('#dribbble-data').html(html.join(''));
     });
+
+twitterFetcher.fetch({
+  'id'              : '259728338522873856',
+  'domId'           : 'tweets',
+  'showUser'        : false,
+  'maxTweets'       : 4,
+  'enableLinks'     : true,
+  'showPermalinks'  : false
+});
 //= require_tree .

@@ -1,0 +1,25 @@
+.tweet-list {
+  @include grid-column(12);
+  padding: 0;
+
+  ul {
+    @include grid-row();
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      @include grid-column(12);
+
+      .tweet {
+        @extend .rule;
+      }
+
+      @media #{$medium-up} {
+        @include grid-column(6);
+      }
+    }
+  }
+
+}

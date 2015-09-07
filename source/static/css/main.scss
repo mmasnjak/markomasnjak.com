@@ -5,6 +5,8 @@
 @import '_components/grid';
 @import '_components/typography';
 @import '_components/header';
+@import '_components/tweets';
+
 
 * { box-sizing: border-box; }
 
@@ -47,10 +49,14 @@ img {
 .content-section {
   @include grid-row();
 
-  header {
-    box-sizing: border-box;
-    @include grid-column(12);
-  }
+    header {
+      box-sizing: border-box;
+      @include grid-column(12);
+    }
+
+}
+
+.content-section.profile {
 
   article {
     box-sizing: border-box;
