@@ -72,33 +72,40 @@ html, body {
   font-family: $font-stack;
   font-weight: $font-weight-normal;
   line-height: $font-leading-normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 1em;
 }
 
 h1 {
   font-size: $font-size-large;
-  line-height: $font-leading-normal;
-  font-weight: $font-weight-medium;
+  line-height: $font-leading-large;
+  font-weight: $font-weight-normal;
 }
 
 h2 {
-  font-size: $font-size-medium;
-  line-height: $font-leading-normal;
-}
-
-h3 {
   font-size: $font-size-normal;
   line-height: $font-leading-normal;
+  margin-top: 2em;
 }
 
-h4 {
+h3, h4, h5, h6 {
   font-size: $font-size-small;
+  letter-spacing: 1px;
   line-height: $font-leading-normal;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 p, ul, ol, blockquote {
   font-size: $font-size-normal;
   line-height: $font-leading-normal;
   margin: 1em 0;
+}
+
+.text-columns {
+  -webkit-column-count: 2;
+  -webkit-column-gap: $base-grid-unit;
 }

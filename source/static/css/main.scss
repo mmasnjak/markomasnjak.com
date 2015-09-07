@@ -1,12 +1,19 @@
 @import 'normalize';
 @import 'variables';
-@import 'typography';
+@import 'functions';
+
+@import '_components/grid';
+@import '_components/typography';
+@import '_components/header';
+
+* { box-sizing: border-box; }
 
 main {
+  box-sizing: border-box;
   width: 100%;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 16px;
+  max-width: $row-width - $header-width;
+  padding: grid-units(2);
+  padding-left: $header-width;
 }
 
 body {
@@ -20,5 +27,54 @@ a {
 
   &:hover {
     opacity: 0.5;
+  }
+}
+
+img {
+  display: block;
+  margin: 0 0 1em;
+  max-width: 100%;
+  height: auto;
+}
+
+.rule {
+  border-top: 1px solid $color-border;
+  display: block;
+  margin-top: grid-units(2);
+  padding-top: grid-units();
+}
+
+.content-section {
+  @include grid-row();
+
+  header {
+    box-sizing: border-box;
+    @include grid-column(12);
+  }
+
+  article {
+    box-sizing: border-box;
+    @include grid-column(12);
+
+    @media #{$medium-up} {
+      @include grid-column(6);
+    }
+
+    @media #{$large-up} {
+      @include grid-column(8);
+    }
+  }
+
+  aside {
+    box-sizing: border-box;
+    @include grid-column(12);
+
+    @media #{$medium-up} {
+      @include grid-column(6);
+    }
+
+    @media #{$large-up} {
+      @include grid-column(4);
+    }
   }
 }

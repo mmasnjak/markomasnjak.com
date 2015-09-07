@@ -1,0 +1,46 @@
+$logo-size: 36px;
+
+.main-header {
+  color: $color-UIGrey4;
+  left: 0;
+  padding: grid-units(2);
+  position: fixed;
+  top: 0;
+  width: $header-width;
+
+  a {
+    color: $color-UIGrey4;
+    text-decoration: none;
+  }
+
+  a.logo {
+    background: url(/static/images/logo@2x.png) left top no-repeat;
+    background-size: $logo-size;
+    display: block;
+    font-size: $font-size-normal;
+    line-height: $font-leading-normal;
+    padding-top: $logo-size + grid-units();
+    text-decoration: none;
+
+    .name {
+      color: black;
+      display: block;
+      font-weight: $font-weight-medium;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    + ul:before {
+      content: "—";
+      display: block;
+      margin-bottom: grid-units();
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}

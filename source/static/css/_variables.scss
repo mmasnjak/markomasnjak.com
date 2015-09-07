@@ -13,12 +13,13 @@ $color-UIGrey4:          rgb(142, 142, 147);
 
 $font-stack:             FFMark, Arial, sans-serif;
 
-$font-size-small:        1.0rem;
-$font-size-normal:       1.5rem;
-$font-size-medium:       2.25rem;
-$font-size-large:        3.375rem;
+$font-size-small:        0.9rem;
+$font-size-normal:       1.3rem;
+$font-size-medium:       1.95rem;
+$font-size-large:        2.95rem;
 
 $font-leading-normal:    1.5em;
+$font-leading-large:     1.3em;
 
 $font-weight-light:      300;
 $font-weight-normal:     400;
@@ -27,4 +28,40 @@ $font-weight-bold:       600;
 
 // BORDERS & SHADOWS -------------------------------------------------------------
 
-$color-border: rgba(31, 31, 31, 0.12);
+$color-border:           rgba(0, 0, 0, 0.12);
+
+// UNITS & GRID ------------------------------------------------------------------
+
+$base-rem-unit:          10px;
+$base-grid-unit:         16px;
+
+$header-width:           264px;
+$row-width:              1600px;
+$total-columns:          12;
+$column-gutter:          32px;
+
+// MEDIA QUERIES ------------------------------------------------------------------
+
+$breakpoint-small:      400px  !default;
+$breakpoint-medium:     800px  !default;
+$breakpoint-large:      1600px !default;
+$breakpoint-xlarge:     3200px !default;
+
+$screen:                "only screen" !default;
+
+$landscape:             "#{$screen} and (orientation: landscape)" !default;
+$portrait:              "#{$screen} and (orientation: portrait)"  !default;
+
+$small-up:              $screen !default;
+$medium-up:             "#{$screen} and (min-width:#{$breakpoint-small})"  !default;
+$large-up:              "#{$screen} and (min-width:#{$breakpoint-medium})" !default;
+$xlarge-up:             "#{$screen} and (min-width:#{$breakpoint-large})"  !default;
+
+$retina:                (
+                          "#{$screen} and (-webkit-min-device-pixel-ratio: 2)",
+                          "#{$screen} and (min--moz-device-pixel-ratio: 2)",
+                          "#{$screen} and (-o-min-device-pixel-ratio: 2/1)",
+                          "#{$screen} and (min-device-pixel-ratio: 2)",
+                          "#{$screen} and (min-resolution: 192dpi)",
+                          "#{$screen} and (min-resolution: 2dppx)"
+                        );
