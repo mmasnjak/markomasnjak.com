@@ -4,12 +4,9 @@
 [submodule "source/static/third-party/animate.css"]
 	path = source/static/third-party/animate.css
 	url = https://github.com/daneden/animate.css.git
-[submodule "source/static/third-party/hammer.js"]
-	path = source/static/third-party/hammer.js
-	url = https://github.com/hammerjs/hammer.js.git
 [submodule "source/static/third-party/zurb-foundation"]
 	path = source/static/third-party/zurb-foundation
 	url = https://github.com/zurb/bower-foundation.git
-[submodule "source/static/third-party/Tweetie"]
-	path = source/static/third-party/Tweetie
-	url = https://github.com/sonnyt/Tweetie.git
+[submodule "source/static/third-party/Twitter-Post-Fetcher"]
+	path = source/static/third-party/Twitter-Post-Fetcher
+	url = https://github.com/jasonmayes/Twitter-Post-Fetcher.git
