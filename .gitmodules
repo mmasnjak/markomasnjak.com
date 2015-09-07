@@ -10,6 +10,6 @@
 [submodule "source/static/third-party/zurb-foundation"]
 	path = source/static/third-party/zurb-foundation
 	url = https://github.com/zurb/bower-foundation.git
-[submodule "source/static/third-party/Twitter-Post-Fetcher"]
-	path = source/static/third-party/Twitter-Post-Fetcher
-	url = https://github.com/jasonmayes/Twitter-Post-Fetcher.git
+[submodule "source/static/third-party/Tweetie"]
+	path = source/static/third-party/Tweetie
+	url = https://github.com/sonnyt/Tweetie.git
