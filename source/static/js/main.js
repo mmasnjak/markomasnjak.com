@@ -20,7 +20,7 @@ twitterFetcher.fetch({
   'id'              : '259728338522873856',
   'domId'           : 'tweets',
   'showUser'        : false,
-  'maxTweets'       : 4,
+  'maxTweets'       : 3,
   'enableLinks'     : true,
   'showPermalinks'  : false
 });

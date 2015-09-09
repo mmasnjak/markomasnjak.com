@@ -1,3 +1,13 @@
+.twitter-feed {
+
+  h2 a {
+    float: right;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+}
+
 .tweet-list {
   @include grid-column(12);
   padding: 0;
@@ -16,10 +26,44 @@
         @extend .rule;
       }
 
+      .timePosted {
+        color: $color-UIGrey3;
+        font-size: $font-size-small;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .interact {
+        display: none;
+
+        a {
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: 22px 22px;
+          display: inline-block;
+          height: 22px;
+          margin-right: grid-units(.5);
+          overflow: hidden;
+          text-indent: -1000px;
+          width: 22px;
+        }
+
+        .twitter_reply_icon {
+          background-image: url(/static/images/ic-twitter-reply@2x.png);
+        }
+
+        .twitter_retweet_icon {
+          background-image: url(/static/images/ic-twitter-retweet@2x.png);
+        }
+
+        .twitter_fav_icon {
+          background-image: url(/static/images/ic-twitter-fav@2x.png);
+        }
+      }
+
       @media #{$medium-up} {
-        @include grid-column(6);
+        @include grid-column(4);
       }
     }
   }
-
 }

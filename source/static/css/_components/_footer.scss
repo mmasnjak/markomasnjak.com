@@ -1,0 +1,7 @@
+.main-footer {
+  @include grid-row();
+
+  > div {
+    @include grid-column(12);
+  }
+}
