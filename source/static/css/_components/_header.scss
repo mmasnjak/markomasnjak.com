@@ -1,7 +1,7 @@
 $logo-size: 36px;
 
 .main-header {
-  color: $color-UIGrey4;
+  color: $color-secondary-text;
   left: 0;
   padding: grid-units(2);
   position: fixed;
@@ -9,7 +9,7 @@ $logo-size: 36px;
   width: $header-width;
 
   a {
-    color: $color-UIGrey4;
+    color: $color-text;
     text-decoration: none;
   }
 
@@ -23,7 +23,7 @@ $logo-size: 36px;
     text-decoration: none;
 
     .name {
-      color: black;
+      color: $color-base;
       display: block;
       font-weight: $font-weight-medium;
     }

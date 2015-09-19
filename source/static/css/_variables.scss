@@ -1,13 +1,13 @@
 // COLORS ------------------------------------------------------------------------
 
-$color-interaction-tint: rgb(52, 170, 220);
-$color-primary:          rgb(31, 31, 31);
-$color-error:            rgb(255, 58, 45);
+$color-base:             rgb(0, 0, 0);
+$color-text:             rgba(0, 0, 0, .87);
+$color-secondary-text:   rgba(0, 0, 0, .54);
+$color-disabled:         rgba(0, 0, 0, .38);
+$color-divider:          rgba(0, 0, 0, 0.12);
 
-$color-UIGrey1:          rgb(247, 247, 247);
-$color-UIGrey2:          rgb(199, 199, 204);
-$color-UIGrey3:          rgb(189, 190, 194);
-$color-UIGrey4:          rgb(142, 142, 147);
+$color-primary:          #2196F3;
+$color-error:            rgb(255, 58, 45);
 
 // TYPOGRAPHY --------------------------------------------------------------------
 
@@ -26,10 +26,6 @@ $font-weight-normal:     400;
 $font-weight-medium:     500;
 $font-weight-bold:       600;
 
-// BORDERS & SHADOWS -------------------------------------------------------------
-
-$color-border:           rgba(0, 0, 0, 0.12);
-
 // UNITS & GRID ------------------------------------------------------------------
 
 $base-rem-unit:          10px;
@@ -42,10 +38,10 @@ $column-gutter:          32px;
 
 // MEDIA QUERIES ------------------------------------------------------------------
 
-$breakpoint-small:      400px  !default;
-$breakpoint-medium:     800px  !default;
-$breakpoint-large:      1600px !default;
-$breakpoint-xlarge:     3200px !default;
+$breakpoint-small:      600px  !default;
+$breakpoint-medium:     1024px  !default;
+$breakpoint-large:      1400px !default;
+$breakpoint-xlarge:     2800px !default;
 
 $screen:                "only screen" !default;
 

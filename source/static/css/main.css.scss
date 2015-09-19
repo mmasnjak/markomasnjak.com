@@ -12,11 +12,11 @@
 * { box-sizing: border-box; }
 
 ::-moz-selection {
-  background: $color-border;
+  background: $color-divider;
 }
 
 ::selection {
-  background: $color-border;
+  background: $color-divider;
 }
 
 main {
@@ -33,7 +33,7 @@ body {
 }
 
 a {
-  color: $color-interaction-tint;
+  color: $color-primary;
 
   &:hover {
     opacity: 0.5;
@@ -48,7 +48,7 @@ img {
 }
 
 .rule {
-  border-top: 1px solid $color-border;
+  border-top: 1px solid $color-divider;
   display: block;
   margin-top: grid-units(2);
   padding-top: grid-units();
