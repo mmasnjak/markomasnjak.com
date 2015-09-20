@@ -1,7 +1,12 @@
 .main-footer {
   @include grid-row();
+  text-align: center;
 
   > div {
     @include grid-column(12);
+  }
+
+  @media #{$medium-up} {
+    text-align: left;
   }
 }

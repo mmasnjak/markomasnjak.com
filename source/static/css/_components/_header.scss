@@ -1,12 +1,17 @@
 $logo-size: 36px;
+$logo-size-small: 44px;
 
 .main-header {
+  background: #fafafa;
+  border-bottom: 1px solid $color-divider;
   color: $color-secondary-text;
   left: 0;
-  padding: grid-units(2);
+  padding: grid-units(.5);
   position: fixed;
+  text-align: center;
   top: 0;
-  width: $header-width;
+  width: 100%;
+  z-index: 1000;
 
   a {
     color: $color-text;
@@ -14,17 +19,17 @@ $logo-size: 36px;
   }
 
   a.logo {
-    background: url(/static/images/logo@2x.png) left top no-repeat;
-    background-size: $logo-size;
+    background: url(/static/images/ic-menu@2x.png) left center no-repeat;
+    background-size: $logo-size-small;
     display: block;
     font-size: $font-size-normal;
-    line-height: $font-leading-normal;
-    padding-top: $logo-size + grid-units();
+    line-height: 34px;
+    padding-left: $logo-size-small + grid-units(.5);
+    padding-right: $logo-size-small + grid-units(.5);
     text-decoration: none;
 
     .name {
       color: $color-base;
-      display: block;
       font-weight: $font-weight-medium;
     }
 
@@ -39,8 +44,62 @@ $logo-size: 36px;
     }
   }
 
+  ul { display: none; }
+
+  @media #{$medium-up} {
+    background: transparent;
+    border: none;
+    padding: grid-units(2);
+    text-align: left;
+    width: $header-width;
+
+    a.logo {
+      background-image: url(/static/images/logo@2x.png);
+      background-position: left top;
+      background-size: $logo-size;
+      line-height: $font-leading-normal;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: $logo-size + grid-units();
+
+      .name { display: block; }
+    }
+
+    ul {
+      display: block;
+      list-style: none;
+      padding: 0;
+    }
+  }
+}
+
+.mobile-navigation {
+  background-color: #fafafa;
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
+
   ul {
     list-style: none;
+    margin: grid-units(2);
     padding: 0;
+
+    li {
+      border-bottom: 1px solid $color-divider;
+      font-size: $font-size-medium;
+      line-height: 88px;
+      text-align: center;
+
+      &:last-child { border: none; }
+
+      a {
+        display: block;
+        text-decoration: none;
+      }
+    }
   }
 }
