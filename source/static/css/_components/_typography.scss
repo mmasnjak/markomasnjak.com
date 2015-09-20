@@ -97,6 +97,7 @@ h1 {
   @media #{$large-up} {
     font-size: $font-size-large;
     line-height: $font-leading-large;
+    font-weight: $font-weight-normal;
   }
 }
 

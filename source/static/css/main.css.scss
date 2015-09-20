@@ -1,6 +1,7 @@
 @import 'normalize';
 @import 'variables';
 @import 'functions';
+@import 'animations';
 
 @import '_components/grid';
 @import '_components/typography';
@@ -153,4 +154,10 @@ img {
       @include grid-column(3);
     }
   }
+}
+
+.no-scroll {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }

@@ -44,7 +44,7 @@ $logo-size-small: 44px;
     }
   }
 
-  ul { display: none; }
+  ul, .small-only { display: none; }
 
   @media #{$medium-up} {
     background: transparent;
@@ -73,32 +73,44 @@ $logo-size-small: 44px;
   }
 }
 
-.mobile-navigation {
-  background-color: #fafafa;
-  display: none;
+.mobile-nav {
+  background: #fafafa url(/static/images/ic-close@2x.png) left top no-repeat;
+  background-size: 44px 44px;
   height: 100%;
   left: 0;
+  padding: grid-units(4);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1001;
 
-  ul {
-    list-style: none;
-    margin: grid-units(2);
-    padding: 0;
+  .nav-items {
+    height: 100%;
+    position: relative;
+    width: 100%;
 
-    li {
-      border-bottom: 1px solid $color-divider;
-      font-size: $font-size-medium;
-      line-height: 88px;
-      text-align: center;
+    ul {
+      display: block;
+      left: 0;
+      list-style: none;
+      margin: -130px 0 0;
+      padding: 0;
+      position: absolute;
+      top: 50%;
+      width: 100%;
 
-      &:last-child { border: none; }
+      li {
+        border-bottom: 1px solid $color-divider;
+        font-size: $font-size-medium;
+        line-height: 64px;
+        text-align: center;
 
-      a {
-        display: block;
-        text-decoration: none;
+        &:last-child { border: none; }
+
+        a {
+          display: block;
+          text-decoration: none;
+        }
       }
     }
   }
