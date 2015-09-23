@@ -52,6 +52,10 @@
       }
 
       @media #{$medium-up} {
+        //@include grid-column(6);
+      }
+
+      @media #{$large-up} {
         @include grid-column(4);
       }
     }

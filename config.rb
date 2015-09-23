@@ -55,14 +55,10 @@ configure :development do
 
   # Reload browser automatically when files change
   activate :livereload
-
 end
 
 # Build-specific configuration
 configure :build do
-
-  # Gzip
-  activate :gzip
 
   # For example, change the Compass output style for deployment
   activate :minify_css

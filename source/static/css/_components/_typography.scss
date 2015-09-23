@@ -81,11 +81,18 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 1em;
 
-  a.view-more-link {
-    color: $color-disabled;
-    float: right;
-    font-weight: 400;
+  a {
+    border-bottom: 1px solid $color-base;
+    color: $color-base;
     text-decoration: none;
+
+    &.view-more-link {
+      border: none;
+      color: $color-disabled;
+      float: right;
+      font-weight: 400;
+      text-decoration: none;
+    }
   }
 }
 

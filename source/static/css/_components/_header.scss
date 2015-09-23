@@ -36,12 +36,6 @@ $logo-size-small: 44px;
     &:hover {
       opacity: 1;
     }
-
-    + ul:before {
-      content: "—";
-      display: block;
-      margin-bottom: grid-units();
-    }
   }
 
   ul, .small-only { display: none; }
@@ -63,6 +57,12 @@ $logo-size-small: 44px;
       padding-top: $logo-size + grid-units();
 
       .name { display: block; }
+
+      &:after {
+        content: "—";
+        display: block;
+        margin-top: grid-units();
+      }
     }
 
     ul {
@@ -93,7 +93,7 @@ $logo-size-small: 44px;
       display: block;
       left: 0;
       list-style: none;
-      margin: -130px 0 0;
+      margin: -162px 0 0;
       padding: 0;
       position: absolute;
       top: 50%;
