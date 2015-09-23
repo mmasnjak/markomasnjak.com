@@ -52,7 +52,6 @@ set :images_dir, 'static/images'
 
 # Development-specific configuration
 configure :development do
-
   # Reload browser automatically when files change
   activate :livereload
 end
@@ -67,7 +66,7 @@ configure :build do
   activate :minify_javascript
 
   # Minify html
-  # activate :minify_html
+  activate :minify_html
 
   # Enable cache buster
   activate :asset_hash
