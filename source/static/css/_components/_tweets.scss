@@ -12,15 +12,19 @@
     li {
       @include grid-column(12);
 
-      .tweet {
-        //@extend .rule;
-      }
-
       .timePosted {
         color: $color-secondary-text;
         font-size: $font-size-small;
         letter-spacing: 1px;
         text-transform: uppercase;
+      }
+
+      a {
+        display: inline-block;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: bottom;
       }
 
       .interact {
@@ -52,11 +56,11 @@
       }
 
       @media #{$medium-up} {
-        //@include grid-column(6);
+        @include grid-column(6);
       }
 
       @media #{$large-up} {
-        @include grid-column(4);
+        @include grid-column(3);
       }
     }
   }

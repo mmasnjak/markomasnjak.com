@@ -23,7 +23,7 @@ $(document).ready(function(){
     'id'              : '259728338522873856',
     'domId'           : 'tweets',
     'showUser'        : false,
-    'maxTweets'       : 3,
+    'maxTweets'       : 4,
     'enableLinks'     : true,
     'showPermalinks'  : false
   });

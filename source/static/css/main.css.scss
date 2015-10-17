@@ -25,7 +25,7 @@ main {
   background-size: auto 300px;
   box-sizing: border-box;
   width: 100%;
-  max-width: $row-width - $header-width;
+  max-width: $row-width;
   padding-top: 300px;
 
   @media #{$medium-up} {
