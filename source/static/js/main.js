@@ -4,19 +4,19 @@ $(document).ready(function(){
 
   $.jribbble.setToken('5eda91fcb18044ffd52459355dd1ba936701f193e6aeff1f9af256fefcc0faa1');
 
-  $.jribbble.users('m_masnjak').shots({'per_page' : 8}).then(function(shots) {
+  $.jribbble.users('m_masnjak').shots({'per_page' : 16}).then(function(shots) {
     var html = [];
 
     shots.forEach(function(shot) {
-      html.push('<div class="thumbnail-item">');
+      html.push('<div class="item">');
       html.push('<a href="' + shot.html_url + '" target="_blank">');
-      html.push('<img src="' + shot.images.normal + '" style="border-bottom: 1px solid rgba(0,0,0,.12);">');
-      html.push('<strong>' + shot.title + '</strong>');
-      html.push('<small class="meta-info">' + getTimestamp(shot.created_at) + '</small>');
+      html.push('<img src="' + shot.images.normal + '" />');
+      html.push('<div class="item-meta"><strong>' + shot.title + '</strong>');
+      html.push('<small class="meta-info">' + getTimestamp(shot.created_at) + '</small></div>');
       html.push('</a></div>');
     });
 
-    $('#dribbble-data').html(html.join(''));
+    $('.works').html(html.join(''));
   });
 
   twitterFetcher.fetch({
