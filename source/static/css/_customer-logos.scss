@@ -14,7 +14,7 @@
   li {
     display: block;
     float: left;
-    padding: $column-gutter;
+    padding: $base-grid-unit $column-gutter;
     text-align: center;
     width: 50%;
 
@@ -28,7 +28,7 @@
     }
 
     @media #{$large-up} {
-      width: 201%;
+      width: 20%;
     }
   }
 }

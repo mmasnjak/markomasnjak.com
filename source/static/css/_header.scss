@@ -45,7 +45,7 @@ $logo-size-small: 44px;
     border: none;
     padding: grid-units(2);
     text-align: left;
-    width: $header-width;
+    width: $header-width-medium;
 
     a.logo {
       background-image: url(/static/images/logo@2x.png);
@@ -70,6 +70,10 @@ $logo-size-small: 44px;
       list-style: none;
       padding: 0;
     }
+  }
+
+  @media #{$large-up} {
+    width: $header-width-large;
   }
 }
 

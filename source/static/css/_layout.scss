@@ -18,7 +18,11 @@ main {
 
   @media #{$medium-up} {
     background: none;
-    padding: 0 grid-units(2) grid-units(2) $header-width;
+    padding: 0 grid-units(2) grid-units(2) $header-width-medium;
+  }
+
+  @media #{$large-up} {
+    padding-left: $header-width-large;
   }
 }
 
