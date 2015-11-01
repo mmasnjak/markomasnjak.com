@@ -148,6 +148,13 @@ img {
   }
 }
 
+.loading-message {
+  background: url(/static/images/loading.gif) $base-grid-unit center no-repeat;
+  background-size: $base-grid-unit $base-grid-unit;
+  line-height: $base-grid-unit;
+  padding-left: grid-units(2.5);
+}
+
 .no-scroll {
   height: 100%;
   width: 100%;
