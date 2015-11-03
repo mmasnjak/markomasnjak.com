@@ -1,12 +1,6 @@
 [submodule "source/static/third-party/jribbble"]
 	path = source/static/third-party/jribbble
 	url = https://github.com/tylergaw/jribbble.git
-[submodule "source/static/third-party/animate.css"]
-	path = source/static/third-party/animate.css
-	url = https://github.com/daneden/animate.css.git
-[submodule "source/static/third-party/zurb-foundation"]
-	path = source/static/third-party/zurb-foundation
-	url = https://github.com/zurb/bower-foundation.git
 [submodule "source/static/third-party/Twitter-Post-Fetcher"]
 	path = source/static/third-party/Twitter-Post-Fetcher
 	url = https://github.com/jasonmayes/Twitter-Post-Fetcher.git
