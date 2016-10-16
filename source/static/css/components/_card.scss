@@ -1,0 +1,24 @@
+.card {
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0px $spacer-xsmall $spacer-medium $color-shadow;
+  display: block;
+  
+  img {
+    display: block;
+  }
+}
+
+a.card {
+  overflow: hidden;
+  
+  @include transition(all 200ms $transition-bounce);
+  
+  &:hover {
+    @include transform(scale(1.05));
+  }
+  
+  &:active {
+    @include transform(scale(.95));
+  }
+}

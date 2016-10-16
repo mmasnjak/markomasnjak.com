@@ -1,14 +1,24 @@
-@import 'normalize';
-@import 'variables';
-@import 'functions';
-@import 'animations';
+@import "bourbon";
+@import "neat";
 
-@import 'grid';
-@import 'typography';
-@import 'header';
-@import 'footer';
-@import 'tweets';
-@import 'customer-logos';
+@import "vendor/normalize";
+@import "variables";
 
-@import 'layout';
-@import 'work';
+// Mixins
+@import "mixins/backdrop-filter";
+
+// Components
+@import "components/card";
+@import "components/collections";
+@import "components/fonts";
+@import "components/layout";
+@import "components/loader";
+@import "components/navigation";
+@import "components/typography";
+
+// Views
+@import "views/clients";
+@import "views/dribbble";
+@import "views/instagram";
+@import "views/profile";
+@import "views/twitter-feed";

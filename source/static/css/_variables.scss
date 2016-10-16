@@ -1,64 +1,60 @@
-// COLORS ------------------------------------------------------------------------
+$color-black-85:       rgba(black, .85);
+$color-black-54:       rgba(black, .54);
+$color-black-38:       rgba(black, .38);
+$color-black-25:       rgba(black, .25);
+$color-black-12:       rgba(black, .12);
 
-$color-base:             rgb(0, 0, 0);
-$color-text:             rgba(0, 0, 0, .87);
-$color-secondary-text:   rgba(0, 0, 0, .54);
-$color-disabled:         rgba(0, 0, 0, .38);
-$color-divider:          rgba(0, 0, 0, 0.12);
+$color-white-85:       rgba(white, .85);
+$color-white-54:       rgba(white, .54);
+$color-white-38:       rgba(white, .38);
+$color-white-12:       rgba(white, .12);
 
-$color-primary:          #2196F3;
-$color-error:            rgb(255, 58, 45);
+$color-primary:        #007cd9;
 
-// TYPOGRAPHY --------------------------------------------------------------------
+$color-border:         $color-black-12;
+$color-shadow:         rgba(black, .1);
 
-$font-stack:             FFMark, Arial, sans-serif;
+$color-text:           black;
+$color-text-disabled:  $color-black-38;
+$color-text-secondary: $color-black-54;
 
-$font-size-small:        0.9rem;
-$font-size-normal:       1.3rem;
-$font-size-medium:       2.1rem;
-$font-size-large:        3.4rem;
+// Typography -------------------------------------------------------------------
 
-$font-leading-normal:    1.5em;
-$font-leading-large:     1.3em;
+$type-root:          10px;
 
-$font-weight-light:      300;
-$font-weight-normal:     400;
-$font-weight-medium:     500;
-$font-weight-bold:       600;
+$font-size-small:    1.0rem;
+$font-size-normal:   1.4rem;
+$font-size-medium:   2.2rem;
+$font-size-large:    3.4rem;
+$font-size-xlarge:   4.8rem;
 
-// UNITS & GRID ------------------------------------------------------------------
+$line-height-small:  1.83333333333em;
+$line-height-normal: 1.71428571429em;
+$line-height-medium: 1.45454545455em;
+$line-height-large:  1.29411764706em;
+$line-height-xlarge: 1.20833333333em;
 
-$base-rem-unit:          10px;
-$base-grid-unit:         16px;
+// Units ------------------------------------------------------------------------
 
-$header-width-medium:    200px;
-$header-width-large:     264px;
-$row-width:              1600px;
-$total-columns:          12;
-$column-gutter:          32px;
+$base-unit:     8px;
 
-// MEDIA QUERIES ------------------------------------------------------------------
+$spacer-xsmall: $base-unit / 2;
+$spacer-small:  $base-unit;
+$spacer-normal: $base-unit * 2;
+$spacer-medium: $base-unit * 4;
+$spacer-large:  $base-unit * 8;
 
-$breakpoint-small:      600px  !default;
-$breakpoint-medium:     1024px  !default;
-$breakpoint-large:      1400px !default;
-$breakpoint-xlarge:     2800px !default;
+$navbar-height: 68px;
 
-$screen:                "only screen" !default;
+// Breakpoints ------------------------------------------------------------------
 
-$landscape:             "#{$screen} and (orientation: landscape)" !default;
-$portrait:              "#{$screen} and (orientation: portrait)"  !default;
+$screen-small:  400px;
+$screen-medium: 769px;
+$screen-large:  1025px;
+$screen-xlarge: 1600px;
 
-$small-up:              $screen !default;
-$medium-up:             "#{$screen} and (min-width:#{$breakpoint-small})"  !default;
-$large-up:              "#{$screen} and (min-width:#{$breakpoint-medium})" !default;
-$xlarge-up:             "#{$screen} and (min-width:#{$breakpoint-large})"  !default;
+$max-width:     1600px;
 
-$retina:                (
-                          "#{$screen} and (-webkit-min-device-pixel-ratio: 2)",
-                          "#{$screen} and (min--moz-device-pixel-ratio: 2)",
-                          "#{$screen} and (-o-min-device-pixel-ratio: 2/1)",
-                          "#{$screen} and (min-device-pixel-ratio: 2)",
-                          "#{$screen} and (min-resolution: 192dpi)",
-                          "#{$screen} and (min-resolution: 2dppx)"
-                        );
+// Transitions ------------------------------------------------------------------
+
+$transition-bounce: cubic-bezier(0.000, 0.405, 0.000, 1.285);

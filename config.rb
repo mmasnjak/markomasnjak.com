@@ -31,7 +31,10 @@ configure :build do
 
   # Minify html
   activate :minify_html
-
+  
+  # Optimize Images
+  activate :imageoptim
+  
   # Enable cache buster
   activate :asset_hash
 end

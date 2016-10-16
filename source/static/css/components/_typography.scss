@@ -1,0 +1,55 @@
+html {
+  font-size: $type-root;
+}
+
+body {
+  color: $color-text;
+  font-family: FFMark, "Avenir Next", "Helvetica", Arial, sans-serif;
+  font-size: $font-size-normal;
+  line-height: $line-height-normal;
+}
+
+h1 {
+  font-size: $font-size-large;
+  line-height: $line-height-large;
+  margin: 2em 0;
+  text-rendering: optimizeLegibility;
+  
+  a {
+    border-bottom: 3px solid black;
+    color: black;
+  }
+  
+  @include media($screen-small) {
+    font-size: $font-size-xlarge;
+    line-height: $line-height-xlarge;
+  }
+}
+
+h2 {
+  border-top: 1px solid $color-border;
+  font-size: $font-size-small;
+  font-weight: 500;
+  line-height: $line-height-small;
+  padding-top: $spacer-normal;
+  text-rendering: optimizeLegibility;
+  text-transform: uppercase;
+  
+  a {
+    color: $color-text-secondary;
+    float: right;
+    font-weight: 400;
+    text-transform: none;
+  }
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  
+  @include transition(opacity 200ms);
+  
+  &:hover {
+    opacity: .5;
+  }
+}

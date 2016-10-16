@@ -1,0 +1,79 @@
+.photo-header {
+  background: #333 url(/static/images/profile.png) top center no-repeat;
+  background-size: cover;
+  margin: 0;
+  margin-top: $navbar-height;
+  min-height: 320px;
+  overflow: hidden;
+  position: relative;
+  
+  img {
+    display: none;
+    height: auto;
+    max-width: 100%;
+    
+    @include media($screen-medium) {
+      display: block;
+    }
+    
+    @include media($screen-xlarge) {
+      display: none;
+    }
+  }
+  
+  .photo-credit {
+    bottom: $spacer-small;
+    color: $color-white-85;
+    font-size: $font-size-small;
+    line-height: $line-height-small;
+    position: absolute;
+    right: $spacer-small;
+    
+    a { color: $color-white-85; }
+  }
+  
+  @include media($screen-medium) {
+    background-image: none;
+    margin-top: 0;
+  }
+  
+  @include media($screen-xlarge) {
+    background-image: url(/static/images/profile.png);
+    background-size: cover;
+    height: 640px;
+  }
+}
+
+.page-footer {
+  border-top: 1px solid $color-border;
+  color: $color-text-secondary;
+  font-size: $font-size-small;
+  line-height: $line-height-small;
+  padding: $spacer-normal 0 $spacer-medium 0;
+}
+
+main {
+  padding: 0 $spacer-normal;
+  
+  @include media($screen-medium){
+    padding-left: 25%;
+  }
+  
+  @include media($screen-large){
+    padding-left: 20%;
+  }
+  
+  @include media($screen-xlarge) {
+    padding-left: 15%;
+  }
+}
+
+.content-section {
+  padding-bottom: $spacer-medium;
+  width: 100%;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}

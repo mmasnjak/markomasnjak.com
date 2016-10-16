@@ -1,0 +1,33 @@
+.content-section--twitter {
+  @extend .content-section;
+  padding-bottom: 0;
+}
+
+.twitter-item {
+  min-height: 188px;
+  
+  .tweet-header {
+    background: url(/static/images/logo-twitter@2x.png) left $spacer-normal center no-repeat;
+    background-size: 24px 24px;
+    height: 24px + ($spacer-normal * 2);
+    overflow: hidden;
+    text-indent: -1000px;
+    width: 100%;
+  }
+  
+  .tweet-media {
+    padding-bottom: $spacer-normal;
+  }
+  
+  .tweet-text {
+    padding: $spacer-normal;
+    padding-top: 0;
+    
+    .time {
+      color: $color-text-disabled;
+      font-size: $font-size-small;
+      line-height: $line-height-small;
+      text-transform: capitalize;
+    }
+  }
+}
