@@ -14,12 +14,12 @@ h1 {
   line-height: $line-height-large;
   margin: 2em 0;
   text-rendering: optimizeLegibility;
-  
+
   a {
     border-bottom: 3px solid black;
     color: black;
   }
-  
+
   @include media($screen-small) {
     font-size: $font-size-xlarge;
     line-height: $line-height-xlarge;
@@ -34,7 +34,7 @@ h2 {
   padding-top: $spacer-normal;
   text-rendering: optimizeLegibility;
   text-transform: uppercase;
-  
+
   a {
     color: $color-text-secondary;
     float: right;
@@ -46,9 +46,9 @@ h2 {
 a {
   color: $color-primary;
   text-decoration: none;
-  
+
   @include transition(opacity 200ms);
-  
+
   &:hover {
     opacity: .5;
   }

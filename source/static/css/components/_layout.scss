@@ -6,21 +6,21 @@
   min-height: 320px;
   overflow: hidden;
   position: relative;
-  
+
   img {
     display: none;
     height: auto;
     max-width: 100%;
-    
+
     @include media($screen-medium) {
       display: block;
     }
-    
+
     @include media($screen-xlarge) {
       display: none;
     }
   }
-  
+
   .photo-credit {
     bottom: $spacer-small;
     color: $color-white-85;
@@ -28,15 +28,15 @@
     line-height: $line-height-small;
     position: absolute;
     right: $spacer-small;
-    
+
     a { color: $color-white-85; }
   }
-  
+
   @include media($screen-medium) {
     background-image: none;
     margin-top: 0;
   }
-  
+
   @include media($screen-xlarge) {
     background-image: url(/static/images/profile.png);
     background-size: cover;
@@ -54,15 +54,15 @@
 
 main {
   padding: 0 $spacer-normal;
-  
+
   @include media($screen-medium){
     padding-left: 25%;
   }
-  
+
   @include media($screen-large){
     padding-left: 20%;
   }
-  
+
   @include media($screen-xlarge) {
     padding-left: 15%;
   }

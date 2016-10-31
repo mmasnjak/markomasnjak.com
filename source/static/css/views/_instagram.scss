@@ -6,13 +6,13 @@
 .instagram-item {
   color: $color-text;
   display: block;
-  
+
   @include transition(all 200ms);
-  
+
   &:hover {
     opacity: 1;
   }
-  
+
   &:active {
     @include transform(scale(.95));
   }

@@ -17,27 +17,27 @@ $dribbble-icon-size: 12px;
 .dribbble-item {
   color: $color-text;
   display: block;
-  
+
   @include transition(all 200ms);
-  
+
   &:hover {
     opacity: 1;
   }
-  
+
   &:active {
     @include transform(scale(.95));
   }
-  
+
   .views {
     @include dribbble-icon('/static/images/ic-view-black38@2x.png');
     display: none;
   }
-  
+
   .favorites {
     @include dribbble-icon('/static/images/ic-favorite-black38@2x.png');
     display: none;
   }
-  
+
   .comments {
     @include dribbble-icon('/static/images/ic-comment-black38@2x.png');
     display: none;
