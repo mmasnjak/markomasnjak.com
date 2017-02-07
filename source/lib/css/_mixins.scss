@@ -1,0 +1,21 @@
+@mixin transition($args...) {
+  -webkit-transition: $args;
+     -moz-transition: $args;
+      -ms-transition: $args;
+       -o-transition: $args;
+          transition: $args;
+}
+
+// Breakpoints -----------------------------------------------------------------
+
+@mixin large-up {
+  @media only screen and (min-width: $break-point-large) {
+    @content;
+  }
+}
+
+@mixin medium-up {
+  @media only screen and (min-width: $break-point-medium) {
+    @content;
+  }
+}

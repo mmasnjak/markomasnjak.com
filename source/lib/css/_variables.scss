@@ -1,0 +1,30 @@
+$font-size-small: 1.0rem;
+$font-size-medium: 1.4rem;
+$font-size-large: 2.8rem;
+$font-size-xlarge: 3.4rem;
+
+$line-height-small: 1.833em;
+$line-height-medium: 1.625em;
+$line-height-large: 1.313em;
+$line-height-xlarge: 1.294em;
+
+$color-headline: black;
+$color-text: rgba(black, .87);
+$color-text-secondary: rgba(black, .54);
+
+$color-primary: #007AE2;
+$color-accent: rgba($color-primary, .1);
+
+$logo-size: 40px;
+
+$spacer-xsmall: 8px;
+$spacer-small: 16px;
+$spacer-medium: 32px;
+$spacer-large: 64px;
+$spacer-xlarge: 128px;
+
+$max-width: 1600px;
+$break-point-large: 769px;
+$break-point-medium: 420px;
+
+$bounce: cubic-bezier(0.680, -0.550, 0.265, 1.550);
