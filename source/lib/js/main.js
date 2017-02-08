@@ -3,28 +3,19 @@ $(document).ready(function() {
     count : 1
   });
   
-  setActiveProject();
+  start();
 });
 
-function setActiveProject() {
-  var currentProject = $('.project.active');
-  
-  if(currentProject.length > 0) {
-    var nextProject = (currentProject.next().length > 0 ? currentProject.next() : $('.project:eq(0)'));
+function start() {
+  $('img').each(function(i) {
+    var img = new Image();
+    var _this = $(this);
+    var imgURL = _this.attr('data-src');
     
-    currentProject.removeClass('active');
-    nextProject.addClass('active');
-  }
-  
-  else {
-    var i = Math.floor(Math.random() * $('.project').length);
+    img.onload = function() {
+      _this.attr('src', imgURL).parent().addClass('active');
+    }
     
-    $('.project:eq(' + i + ')').addClass('active');
-  }
-  
-  startCarouselTimer();
-}
-
-function startCarouselTimer() {
-  setTimeout(setActiveProject, 10000);
+    img.src = imgURL;
+  });
 }

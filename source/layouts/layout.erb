@@ -16,6 +16,7 @@
   	<meta property="og:title" content="<%= current_page.data.title || "Marko Masnjak" %>">
   	<meta property="og:description" content="<%= current_page.data.description || "Product Designer" %>">
   	<meta property="og:url" content="http://markomasnjak.com">
+  	<meta property="fb:app_id" content="187215658317507">
     
     <title><%= current_page.data.title || "Marko Masnjak - Product Designer" %></title>
     
@@ -24,21 +25,23 @@
     <link rel="apple-touch-icon" sizes="120x120" href="/lib/images/touch-icons/touch-icon-iphone@2x.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/lib/images/touch-icons/touch-icon-ipad@2x.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
-  
-    <%= stylesheet_link_tag :main %>
+    
+    <link rel="stylesheet" href="/lib/css/main.css" />
+    
   </head>
 
   <body class="<%= page_classes %>">
     <%= yield %>
     
     <script 
+      type="text/javascript"
       src="https://code.jquery.com/jquery-3.1.1.min.js"
       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      crossorigin="anonymous">
+      crossorigin="anonymous" defer>
     </script>
     
-    <%= javascript_include_tag :twitter %> 
-    <%= javascript_include_tag :main %>
+    <script type="text/javascript" src="/lib/js/twitter.js" defer></script>
+    <script type="text/javascript" src="/lib/js/main.js" defer></script>
     
     <% if build? %>
       <%= partial "google-analytics" %>
