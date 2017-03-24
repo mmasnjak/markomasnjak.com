@@ -1,12 +1,18 @@
 $(document).ready(function() {
+  var chuckNorris = $('#chuck-norris-joke');
+  
   $('.tweets').twitter({
     count : 1
   });
   
-  start();
+  if (chuckNorris.length > 0) {
+    tellTheJoke(chuckNorris);
+  }
+  
+  showImageGallery();
 });
 
-function start() {
+function showImageGallery() {
   $('img').each(function(i) {
     var img = new Image();
     var _this = $(this);
@@ -17,5 +23,11 @@ function start() {
     }
     
     img.src = imgURL;
+  });
+}
+
+function tellTheJoke(j) {
+  $.getJSON('https://api.icndb.com/jokes/random', function (data) {
+    j.html(data.value.joke);
   });
 }
