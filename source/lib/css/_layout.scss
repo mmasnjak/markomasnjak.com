@@ -99,11 +99,11 @@ main {
 
   article {
     box-sizing: border-box;
-    flex-basis: 100%;
+    width: 100%;
     padding: $spacer-small;
     
     @include medium-up {
-      flex-basis: 50%;
+      width: 50%;
       padding: $spacer-medium;
     }
     
@@ -119,7 +119,7 @@ main {
     @include medium-up {
       box-sizing: border-box;
       display: block;
-      flex-basis: 50%;
+      width: 50%;
       height: 100%;
       position: relative;
     }
@@ -127,13 +127,14 @@ main {
   
   @include medium-up {
     align-items: center;
-    display: flex;
-    flex-wrap: wrap;
     height: 100%;
     left: 0;
     position: absolute;
     top: 0;
     width: 100%;
+    
+    @include flexbox();
+    @include flex-wrap();
   }
 }
 
