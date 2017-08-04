@@ -10,6 +10,7 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 
 # Plugins
 gem "middleman-minify-html"
+gem 'middleman-search_engine_sitemap'
 
 # Middleman Gems
 gem 'middleman', '>= 4.0.0'
@@ -17,4 +18,4 @@ gem 'middleman-livereload'
 gem 'middleman-compass', '>= 4.0.0'
 
 gem 'image_optim'
-gem 'middleman-imageoptim', :git => 'https://github.com/plasticine/middleman-imageoptim.git', :branch => 'middleman-4'
+gem "middleman-imageoptim", :git => "https://github.com/plasticine/middleman-imageoptim", :branch => "master"

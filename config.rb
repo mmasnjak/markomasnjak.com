@@ -20,4 +20,7 @@ configure :build do
   activate :minify_html
   activate :imageoptim
   activate :asset_hash
+  
+  set :url_root, 'http://markomasnjak.com'
+  activate :search_engine_sitemap
 end
