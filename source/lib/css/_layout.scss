@@ -8,7 +8,7 @@ body {
   font-size: $font-size-medium;
   font-weight: 400;
   line-height: $line-height-medium;
-  
+
   -webkit-font-smoothing: antialiased;
 }
 
@@ -20,7 +20,7 @@ h1 {
   font-weight: 500;
   line-height: $line-height-large;
   margin: $spacer-medium 0;
-  
+
   @include medium-up {
     font-size: $font-size-xlarge;
     font-weight: 400;
@@ -53,17 +53,17 @@ a {
   height: 200px;
   padding: $spacer-small;
   z-index: 10;
-  
+
   .logo {
     fill: white;
     height: $logo-size;
     width: $logo-size;
-    
+
     @include medium-up {
       fill: $color-text;
     }
   }
-  
+
   @include medium-up {
     background: transparent;
     height: auto;
@@ -82,12 +82,12 @@ a {
   padding: $spacer-small;
   position: fixed;
   z-index: 10;
-  
+
   a {
     color: $color-text-secondary;
     margin-right: 8px;
   }
-  
+
   @include medium-up {
     padding: $spacer-medium;
   }
@@ -101,21 +101,21 @@ main {
     box-sizing: border-box;
     width: 100%;
     padding: $spacer-small;
-    
+
     @include medium-up {
       width: 50%;
       padding: $spacer-medium;
     }
-    
+
     @include large-up {
       padding-bottom: ($spacer-medium * 2) + $logo-size;
       padding-top: ($spacer-medium * 2) + $logo-size;
     }
   }
-  
+
   aside {
     display: none;
-    
+
     @include medium-up {
       box-sizing: border-box;
       display: block;
@@ -124,7 +124,7 @@ main {
       position: relative;
     }
   }
-  
+
   @include medium-up {
     align-items: center;
     height: 100%;
@@ -132,7 +132,7 @@ main {
     position: absolute;
     top: 0;
     width: 100%;
-    
+
     @include flexbox();
     @include flex-wrap();
   }
@@ -146,26 +146,26 @@ main {
   position: absolute;
   text-align: center;
   transform: translateX(10%);
-  
+
   bottom: $spacer-medium;
   left: 0;
   top: $spacer-medium;
   right: 0;
-    
+
   @include transition(all 2s ease);
-  
+
   img {
     display: block;
     max-height: 100%;
     margin: auto;
     width: auto;
   }
-  
+
   &.active {
     opacity: 1;
     transform: translateX(0);
   }
-  
+
   @include large-up {
     left: $spacer-medium;
     right: $spacer-medium;
@@ -181,7 +181,7 @@ main {
     color: $color-text-secondary;
     display: block;
     font-size: $font-size-small;
-    
+
     a {
       margin-left: $spacer-xsmall;
     }
