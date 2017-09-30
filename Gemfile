@@ -16,6 +16,7 @@ gem 'middleman-search_engine_sitemap'
 gem 'middleman', '>= 4.0.0'
 gem 'middleman-livereload'
 gem 'middleman-compass', '>= 4.0.0'
+gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 
 gem 'image_optim'
 gem "middleman-imageoptim", :git => "https://github.com/plasticine/middleman-imageoptim", :branch => "master"
