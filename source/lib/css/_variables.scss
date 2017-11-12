@@ -1,30 +1,30 @@
-$font-size-small: 1.0rem;
-$font-size-medium: 1.4rem;
-$font-size-large: 2.8rem;
-$font-size-xlarge: 3.4rem;
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
-$line-height-small: 1.833em;
-$line-height-medium: 1.625em;
-$line-height-large: 1.313em;
-$line-height-xlarge: 1.294em;
+$text-display:    700 5.6rem/6.4rem $font-family;
+$text-title:      600 4.8rem/5.6rem $font-family;
+$text-subheading: 600 2.4rem/3.2rem $font-family;
+$text-body1:      400 1.6rem/2.4rem $font-family;
+$text-body2:      500 1.6rem/2.4rem $font-family;
+$text-caption:    400 1.1rem/2.4rem $font-family;
 
 $color-headline: black;
-$color-text: rgba(black, .87);
-$color-text-secondary: rgba(black, .54);
+$color-text: rgba(black, 0.88);
+$color-text-secondary: rgba(black, 0.54);
 
-$color-primary: #007AE2;
-$color-accent: rgba($color-primary, .1);
+$color-primary: #EA148C;
+$color-accent: rgba($color-primary, 0.1);
 
-$logo-size: 40px;
+$logo-size: 4.0rem;
 
-$spacer-xsmall: 8px;
-$spacer-small: 16px;
-$spacer-medium: 32px;
-$spacer-large: 64px;
-$spacer-xlarge: 128px;
+$spacer-xsmall: 0.8rem;
+$spacer-small: 1.6rem;
+$spacer-medium: 3.2rem;
+$spacer-large: 6.4rem;
+$spacer-xlarge: 12.8rem;
 
-$max-width: 1600px;
+$max-width: 1280px;
+$break-point-medium: 421px;
 $break-point-large: 769px;
-$break-point-medium: 420px;
+$break-point-xlarge: 1025px;
 
 $bounce: cubic-bezier(0.680, -0.550, 0.265, 1.550);

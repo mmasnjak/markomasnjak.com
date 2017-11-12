@@ -1,0 +1,17 @@
+@mixin medium-up {
+  @media only screen and (min-width: $break-point-medium) {
+    @content;
+  }
+}
+
+@mixin large-up {
+  @media only screen and (min-width: $break-point-large) {
+    @content;
+  }
+}
+
+@mixin xlarge-up {
+  @media only screen and (min-width: $break-point-xlarge) {
+    @content;
+  }
+}

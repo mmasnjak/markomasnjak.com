@@ -1,0 +1,34 @@
+body {
+  color: $color-text;
+  font: $text-body1;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  color: $color-text;
+  font: $text-display;
+  margin-bottom: $spacer-medium;
+  margin-top: 0;
+
+  a, a:hover {
+    color: $color-text;
+  }
+}
+
+p, ul, ol {
+  margin-top: 0;
+  margin-bottom: $spacer-medium;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.lead-paragraph {
+  font: $text-subheading;
+}

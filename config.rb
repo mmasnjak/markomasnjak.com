@@ -20,7 +20,7 @@ configure :build do
   activate :minify_html
   activate :imageoptim
   activate :asset_hash
-  
+
   set :url_root, 'http://markomasnjak.com'
   activate :search_engine_sitemap
 end
@@ -29,7 +29,6 @@ end
 activate :deploy do |deploy|
   deploy.deploy_method   = :ftp
   deploy.host            = 'markomasnjak.com'
-  deploy.path            = '/markomasnjak.com/testing'
+  deploy.path            = '/markomasnjak.com'
   deploy.user            = 'marmas64'
-  deploy.password        = 'St1nk3r81'
 end
