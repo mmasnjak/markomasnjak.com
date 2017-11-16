@@ -9,7 +9,8 @@
     <meta name="google-site-verification" content="5-cWdmww2N-LK3ROBEAjBa_vwaLScRvXtbF2pQlNl6I" />
 
     <!-- Facebook -->
-    <meta property="og:image" content="http://markomasnjak.com/fb-graph/profile.png">
+    <meta property="og:image" content="http://markomasnjak.com/linked-images/profile.png">
+    <meta property="og:type" content="website">
   	<meta property="og:image:type" content="image/jpeg">
   	<meta property="og:image:width" content="800">
   	<meta property="og:image:height" content="320">
@@ -20,11 +21,11 @@
 
     <title><%= current_page.data.title || "Marko Masnjak - Product Designer" %></title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="/linked-images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/linked-images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/linked-images/favicon-16x16.png">
+    <link rel="manifest" href="/linked-images/manifest.json">
+    <link rel="mask-icon" href="/linked-images/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
@@ -34,11 +35,9 @@
 
   <body class="<%= page_classes %>">
     <header class="main-navigation">
-      <nav>
-        <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288 288">
-          <path d="M180,324A144,144,0,1,1,324,180,144,144,0,0,1,180,324Zm3.28-198.32a18.5,18.5,0,0,0-26.68,0l-.08.1h0l-70.94,73h0l-.13.11a19.8,19.8,0,0,0,0,27.44,18.5,18.5,0,0,0,26.68,0l.11-.14h0l70.94-73h0l.1-.08A19.8,19.8,0,0,0,183.28,125.68Zm75.15,0a18.5,18.5,0,0,0-26.68,0,19,19,0,0,0-1.49,1.88l-.17-.17-69.35,71.34h0l-.14.12a19.8,19.8,0,0,0,0,27.44,18.5,18.5,0,0,0,26.68,0s.07-.1.12-.15h0l69.35-71.34-.17-.17a18.77,18.77,0,0,0,1.83-1.54A19.8,19.8,0,0,0,258.43,125.68Zm0,73.18a18.5,18.5,0,0,0-26.68,0,19.8,19.8,0,0,0,0,27.44,18.5,18.5,0,0,0,26.68,0A19.8,19.8,0,0,0,258.43,198.87Z" transform="translate(-36 -36)"/>
-        </svg>
-      </nav>
+      <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288 288">
+        <path d="M180,324A144,144,0,1,1,324,180,144,144,0,0,1,180,324Zm3.28-198.32a18.5,18.5,0,0,0-26.68,0l-.08.1h0l-70.94,73h0l-.13.11a19.8,19.8,0,0,0,0,27.44,18.5,18.5,0,0,0,26.68,0l.11-.14h0l70.94-73h0l.1-.08A19.8,19.8,0,0,0,183.28,125.68Zm75.15,0a18.5,18.5,0,0,0-26.68,0,19,19,0,0,0-1.49,1.88l-.17-.17-69.35,71.34h0l-.14.12a19.8,19.8,0,0,0,0,27.44,18.5,18.5,0,0,0,26.68,0s.07-.1.12-.15h0l69.35-71.34-.17-.17a18.77,18.77,0,0,0,1.83-1.54A19.8,19.8,0,0,0,258.43,125.68Zm0,73.18a18.5,18.5,0,0,0-26.68,0,19.8,19.8,0,0,0,0,27.44,18.5,18.5,0,0,0,26.68,0A19.8,19.8,0,0,0,258.43,198.87Z" transform="translate(-36 -36)"/>
+      </svg>
     </header>
 
     <main><%= yield %></main>

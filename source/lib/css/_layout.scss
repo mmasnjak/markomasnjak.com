@@ -1,18 +1,15 @@
 html {
-  font-size: 8px;
-
-  @include large-up {
-    font-size: 10px;
-  }
-}
-
-body {
-  padding-top: ($spacer-xsmall * 2) + $logo-size;
+  font-size: 10px;
 }
 
 main {
   overflow-x: hidden;
-  padding: $spacer-medium;
+  padding: 0 $spacer-small;
+
+  @include medium-up {
+    padding-left: $spacer-medium;
+    padding-right: $spacer-medium;
+  }
 }
 
 .content {
@@ -25,9 +22,16 @@ main {
 
   article {
     max-width: 68.0rem;
-
+    padding-bottom: $spacer-large;
+    padding-top: $spacer-large;
+    
     @include medium-up {
       padding-right: $spacer-medium;
+    }
+
+    @include large-up {
+      padding-bottom: $spacer-xlarge;
+      padding-top: $spacer-xlarge;
     }
   }
 
@@ -45,11 +49,6 @@ main {
     @include medium-up {
       display: block;
     }
-  }
-
-  &.no-image {
-    padding-top: $spacer-xlarge;
-    padding-bottom: $spacer-xlarge;
   }
 
   @include medium-up {

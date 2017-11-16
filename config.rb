@@ -19,7 +19,7 @@ configure :build do
   activate :minify_javascript
   activate :minify_html
   activate :imageoptim
-  activate :asset_hash
+  activate :asset_hash, :ignore => [/^linked-images/]
 
   set :url_root, 'http://markomasnjak.com'
   activate :search_engine_sitemap

@@ -1,23 +1,8 @@
 .main-navigation {
-  background-color: rgba(white, 0.98);
-  left: 0;
-  padding: $spacer-xsmall $spacer-small;
-  position: fixed;
-  right: 0;
-  top: 0;
-  transition: box-shadow 500ms;
-
-  @supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    background-color: rgba(white, 0.9);
-  }
-
-  nav {
-    max-width: $max-width;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $max-width;
+  padding: $spacer-medium $spacer-small 0 $spacer-small;
 
   .logo {
     display: block;

@@ -4,5 +4,11 @@
   .tweet-timestamp {
     color: $color-text-secondary;
     font: $text-caption;
+
+    a {
+      display: inline-block;
+      margin-left: $spacer-xsmall;
+      margin-top: $spacer-xsmall;
+    }
   }
 }

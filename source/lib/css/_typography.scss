@@ -1,16 +1,20 @@
 body {
   color: $color-text;
-  font: $text-body1;
-  -webkit-font-smoothing: antialiased;
+  font: $text-body-1;
 }
 
 h1 {
   color: $color-text;
-  font: $text-display;
+  font: $text-title;
   margin-bottom: $spacer-medium;
   margin-top: 0;
 
-  a, a:hover {
+  @include medium-up {
+    font: $text-display;
+  }
+
+  a,
+  a:hover {
     color: $color-text;
   }
 }
@@ -30,5 +34,9 @@ a {
 }
 
 .lead-paragraph {
-  font: $text-subheading;
+  font: $text-body-2;
+
+  @include medium-up {
+    font: $text-subheading;
+  }
 }

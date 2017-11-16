@@ -9,30 +9,10 @@ $(document).ready(function() {
     tellTheJoke(chuckNorris);
   }
 
-  showImageGallery();
-
-  $(window).scroll(function(e) {
-    toggleClassOnScroll({
-      item: $('.main-navigation'),
-      threshold: 48
-    });
-  });
+  showImage();
 });
 
-function toggleClassOnScroll(options) {
-  var settings = $.extend({
-    class: 'scrolled',
-    threshold: 0
-  }, options);
-
-  if($(window).scrollTop() > settings.threshold) {
-    settings.item.addClass(settings.class);
-  } else {
-    settings.item.removeClass(settings.class);
-  }
-}
-
-function showImageGallery() {
+function showImage() {
   $('img').each(function(i) {
     var img = new Image();
     var _this = $(this);
