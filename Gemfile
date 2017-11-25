@@ -14,6 +14,7 @@ gem 'middleman-search_engine_sitemap'
 
 # Middleman Gems
 gem 'middleman', '>= 4.2.1'
+gem 'middleman-inline'
 gem 'middleman-livereload'
 gem 'middleman-compass', '>= 4.0.1'
 gem 'middleman-deploy', '~> 2.0.0.pre.alpha'

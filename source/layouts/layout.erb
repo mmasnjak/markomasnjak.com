@@ -29,8 +29,11 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="apple-mobile-web-app-capable" content="yes">
 
-    <link rel="stylesheet" href="/lib/css/main.css" />
-
+    <% if build? %>
+      <%= inline_css 'main' %>
+    <% else %>
+      <link rel="stylesheet" href="/lib/css/main.css" />
+    <% end %>
   </head>
 
   <body class="<%= page_classes %>">
