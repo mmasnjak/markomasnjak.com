@@ -1,10 +1,9 @@
 (function ($) {
   $.fn.twitter = function(options) {
     var settings = $.extend({
-      user  : 'm_masnjak',
+      user  : null,
       count : 20,
-      url   : 'http://markomasnjak.com/twitter-feed',
-      itemWidth: 320,
+      url   : 'http://markomasnjak.com/feeds/twitter/',
     }, options);
 
     function relativeTime(d) {
@@ -23,7 +22,7 @@
   		}
 
   		if (diff < second * 2) {
-  			return 'just now';
+  			return 'Just now';
   		}
 
   		if (diff < minute) {
@@ -47,7 +46,7 @@
   		}
 
   		if (diff > day && diff < day * 2) {
-  			return 'yesterday';
+  			return 'Yesterday';
   		}
 
   		if (diff < day * 365) {
@@ -55,7 +54,7 @@
   		}
 
   		else {
-  			return 'over a year ago';
+  			return 'Over a year ago';
   		}
     }
 
@@ -90,22 +89,31 @@
 
     return this.each(function() {
       var _this = $(this);
-      var collection;
+
+      var html = '<div class="feed-item">' +
+        '<a class="tweet" href="TWEET_URL" target="_blank">' +
+          '<div class="feed-item__icon">' +
+            '<img src="/lib/images/twitter.png" width="44" height="44"/>' +
+          '</div>' +
+          '<div class="feed-item__message" cite="TWEET_URL">' +
+            'TWEET_TEXT' +
+          '</div>' +
+          '<div class="feed-item__cite">' +
+            'AGO PLACE' +
+          '</div>' +
+        '</a>' +
+      '</div>';
 
       $.ajax({
         url: settings.url,
         type: 'GET',
         dataType: 'json',
         data: {
+          'user' : settings.user,
           'count' : settings.count
         },
         success: function(data, textStatus, xhr) {
-          var html = '<blockquote class="tweet" cite="TWEET_URL">' +
-            'TWEET_TEXT' +
-            '<footer class="tweet-timestamp">AGO PLACE <a href="https://twitter.com/" target="_blank">Follow Me on Twitter</a></footer>' +
-          '</blockquote>';
-          
-          _this.removeClass('loading').empty();
+          _this.empty();
 
           for(var i = 0; i < data.length; i++) {
             _this.append(
@@ -113,17 +121,26 @@
                   .replace(/USER/g, data[i].user.screen_name)
                   .replace('AGO', relativeTime(data[i].created_at))
                   .replace(/ID/g, data[i].id_str)
-                  .replace('TWEET_URL', 'https://twitter.com/' + settings.user + '/status/' + data[i].id_str)
+                  .replace(/TWEET_URL/g, 'https://twitter.com/' + settings.user + '/status/' + data[i].id_str)
                   .replace('PLACE', (data[i].place ? 'from ' + data[i].place.full_name : ''))
                   .replace('TWEET_IMG', (data[i].entities.media && data[i].entities.media.length ? '<div class="tweet-media"><img src="' + data[i].entities.media[0].media_url + '"/></div>': ''))
             );
           }
         },
         error: function(e) {
-          _this.empty()
-               .removeClass('loading')
-               .addClass('error')
-               .append('<div class="error-message">Sorry, there was an error. Please <a href=".">refresh</a> this page to try again.</div>');
+          _this.empty().append(
+            '<div class="feed-item feed-item--error">' +
+              '<div class="feed-item__icon">' +
+                '<img src="/lib/images/twitter.png" width="44" height="44"/>' +
+              '</div>' +
+              '<div class="feed-item__message">' +
+                'Sorry, there was an error. Please try again later.' +
+              '</div>' +
+              '<div class="feed-item__cite">' +
+                '<a href="https://twitter.com/' + settings.user + '" target="_blank">Follow Me on Twitter</a>' +
+              '</div>' +
+            '</div>'
+          );
         }
       });
     });

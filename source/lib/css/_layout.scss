@@ -1,61 +1,65 @@
-html {
-  font-size: 10px;
-}
+$panel-size: 64rem;
 
-main {
-  overflow-x: hidden;
-  padding: 0 $spacer-small;
+.layout {
+  @include large-up {
+    padding-left: 44%;
+    position: relative;
+  }
 
-  @include medium-up {
-    padding-left: $spacer-medium;
-    padding-right: $spacer-medium;
+  @include xlarge-up {
+    padding-left: $panel-size
   }
 }
 
-.content {
-  align-items: center;
-  display: grid;
-  grid-template-columns: 1fr;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: $max-width;
-
-  article {
-    max-width: 68.0rem;
-    padding-bottom: $spacer-large;
-    padding-top: $spacer-large;
-    
-    @include medium-up {
-      padding-right: $spacer-medium;
-    }
-
-    @include large-up {
-      padding-bottom: $spacer-xlarge;
-      padding-top: $spacer-xlarge;
-    }
-  }
-
-  figure {
-    display: none;
-    margin: 0;
-    max-height: 800px;
-    overflow-y: visible;
-    padding-left: $spacer-large;
-
-    img {
-      max-width: 1400px;
-    }
-
-    @include medium-up {
-      display: block;
-    }
-  }
+.intro {
+  color: black;
+  font: $text-body-2;
+  letter-spacing: -0.05rem;
+  max-width: $panel-size;
+  padding: $spacer-medium;
 
   @include medium-up {
-    grid-template-columns: 60% 40%;
+    font: $text-subtitle;
+    padding: $spacer-large;
   }
 
   @include large-up {
-    grid-template-columns: 50% 50%;
+    bottom: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    left: 0;
+    margin-bottom: 0;
+    position: fixed;
+    top: 0;
+    width: 44%;
+  }
+
+  @include xlarge-up {
+    width: $panel-size;
+  }
+}
+
+.intro__header,
+.intro__content {
+  margin-bottom: $spacer-medium;
+}
+
+.intro__footer {
+  color: $color-black-64;
+  font: $text-caption-1;
+}
+
+.intro__footer-link {
+  margin-right: $spacer-xsmall;
+}
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
+
+  @include medium-up {
+    padding: $spacer-large;
   }
 }

@@ -36,31 +36,61 @@
     <% end %>
   </head>
 
-  <body class="<%= page_classes %>">
-    <header class="main-navigation">
-      <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288 288">
-        <path d="M180,324A144,144,0,1,1,324,180,144,144,0,0,1,180,324Zm3.28-198.32a18.5,18.5,0,0,0-26.68,0l-.08.1h0l-70.94,73h0l-.13.11a19.8,19.8,0,0,0,0,27.44,18.5,18.5,0,0,0,26.68,0l.11-.14h0l70.94-73h0l.1-.08A19.8,19.8,0,0,0,183.28,125.68Zm75.15,0a18.5,18.5,0,0,0-26.68,0,19,19,0,0,0-1.49,1.88l-.17-.17-69.35,71.34h0l-.14.12a19.8,19.8,0,0,0,0,27.44,18.5,18.5,0,0,0,26.68,0s.07-.1.12-.15h0l69.35-71.34-.17-.17a18.77,18.77,0,0,0,1.83-1.54A19.8,19.8,0,0,0,258.43,125.68Zm0,73.18a18.5,18.5,0,0,0-26.68,0,19.8,19.8,0,0,0,0,27.44,18.5,18.5,0,0,0,26.68,0A19.8,19.8,0,0,0,258.43,198.87Z" transform="translate(-36 -36)"/>
-      </svg>
+  <body class="<%= page_classes %> layout">
+    <header class="intro">
+      <div class="intro__header">
+        <svg width="40" height="40" viewBox="0 0 288 288">
+          <path d="M180,324A144,144,0,1,1,324,180,144,144,0,0,1,180,324Zm3.28-198.32a18.5,18.5,0,0,0-26.68,0l-.08.1h0l-70.94,73h0l-.13.11a19.8,19.8,0,0,0,0,27.44,18.5,18.5,0,0,0,26.68,0l.11-.14h0l70.94-73h0l.1-.08A19.8,19.8,0,0,0,183.28,125.68Zm75.15,0a18.5,18.5,0,0,0-26.68,0,19,19,0,0,0-1.49,1.88l-.17-.17-69.35,71.34h0l-.14.12a19.8,19.8,0,0,0,0,27.44,18.5,18.5,0,0,0,26.68,0s.07-.1.12-.15h0l69.35-71.34-.17-.17a18.77,18.77,0,0,0,1.83-1.54A19.8,19.8,0,0,0,258.43,125.68Zm0,73.18a18.5,18.5,0,0,0-26.68,0,19.8,19.8,0,0,0,0,27.44,18.5,18.5,0,0,0,26.68,0A19.8,19.8,0,0,0,258.43,198.87Z" transform="translate(-36 -36)"/>
+        </svg>
+      </div>
+
+      <div class="intro__content">
+        <% if page_classes === "index" %>
+          <h1>Hello, my name is Marko. I&rsquo;m&nbsp;a product designer at <a href="https://braintreepayments.com" target="_blank">Braintree</a> in&nbsp;Chicago.</h1>
+          <p>I&rsquo;m passionate about user-centered design that exhibits exceptional clarity and&nbsp;simplicity.</p>
+        <% else %>
+          <h1>404: Page Not Found</h1>
+          <p id="chuck-norris-joke">Thinking...</p>
+          <a class="button" href="/">Back Home</a>
+        <% end %>
+      </div>
+
+      <div class="intro__footer">
+        <span class="intro__footer-link">
+          <a href="https://twitter.com/m_masnjak" target="_blank">Twitter</a>
+        </span>
+
+        <span class="intro__footer-link">
+          <a href="https://dribbble.com/m_masnjak" target="_blank">Dribbble</a>
+        </span>
+
+        <span class="intro__footer-link">
+          <a href="https://www.linkedin.com/in/markomasnjak" target="_blank">LinkedIn</a>
+        </span>
+
+        <span class="intro__footer-link">
+          <a href="https://instagram.com/mmasnjak" target="_blank">Instagram</a>
+        </span>
+
+        <span class="intro__footer-link">
+          <a href="mailto:%68%65%6clo%40m%61r%6b&#111;m%61&#115;%6eja&#107;%2e%63o%6d?subject=Hello">Email</a>
+        </span>
+      </div>
     </header>
 
-    <main><%= yield %></main>
-
-    <footer class="page-footer">
-      <a href="https://twitter.com/m_masnjak" target="_blank">Twitter</a>
-      <a href="https://dribbble.com/m_masnjak" target="_blank">Dribbble</a>
-      <a href="https://www.linkedin.com/in/markomasnjak" target="_blank">LinkedIn</a>
-      <a href="https://instagram.com/mmasnjak" target="_blank">Instagram</a>
-      <a href="mailto:%68%65%6clo%40m%61r%6b&#111;m%61&#115;%6eja&#107;%2e%63o%6d?subject=Hello">Email</a>
-    </footer>
+    <main class="content">
+      <%= yield %>
+    </main>
 
     <script
       type="text/javascript"
-      src="https://code.jquery.com/jquery-3.1.1.min.js"
-      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous" defer>
     </script>
 
     <script type="text/javascript" src="/lib/js/twitter.js" defer></script>
+    <script type="text/javascript" src="/lib/js/dribbble.js" defer></script>
     <script type="text/javascript" src="/lib/js/main.js" defer></script>
 
     <% if build? %>

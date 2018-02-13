@@ -1,0 +1,16 @@
+.button {
+  background-color: $color-black-04;
+  border-radius: 0.8rem;
+  display: inline-block;
+  padding: $spacer-xsmall $spacer-medium;
+  transition: color 200ms, transform 200ms;
+
+  &:hover {
+    color: $color-primary;
+    text-decoration: none;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}

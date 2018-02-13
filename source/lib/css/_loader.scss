@@ -18,27 +18,23 @@
   $arc:        0.75;         // fraction of the circumference that the arc grows to
   $perimeter:  30px * pi();  // circumference of the raw svg inner cricle
 
-  // measure to prevent inline block spacing from affecting the outer rotation
+  animation: inner $speed linear infinite;
+  animation: outer $speed * $loops linear infinite;
+  display: inline-block;
   font-size: 0;
 
-  display: inline-block;
-  animation: outer $speed * $loops linear infinite;
-
-  //svg {
-    animation: inner $speed linear infinite;
-
-    circle {
-      fill: none;
-      stroke: $color;
-      stroke-linecap: $linecap;
-      animation: arc $speed $easing infinite;
-    }
-  //}
+  circle {
+    animation: arc $speed $easing infinite;
+    fill: none;
+    stroke-linecap: $linecap;
+    stroke: $color;
+  }
 
   @keyframes outer {
     0% {
       transform: rotate(0);
     }
+
     100% {
       transform: rotate(360deg);
     }
@@ -48,6 +44,7 @@
     0% {
       transform: rotate(-360deg * (1 - $arc));
     }
+
     100% {
       transform: rotate(0);
     }
@@ -58,10 +55,12 @@
       stroke-dasharray: 1 $perimeter;
       stroke-dashoffset: 0;
     }
+
     40% {
       stroke-dasharray: $arc * $perimeter, $perimeter;
       stroke-dashoffset: 0;
     }
+
     100% {
       stroke-dasharray: 1 $perimeter;
       stroke-dashoffset: -$arc * $perimeter;

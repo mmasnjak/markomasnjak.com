@@ -5,6 +5,8 @@ page '/*.txt', layout: false
 config[:js_dir] = 'lib/js'
 config[:css_dir] = 'lib/css'
 
+password = ENV["PASSWORD"]
+
 # General
 activate :directory_indexes
 
@@ -28,8 +30,10 @@ end
 
 # Deploy
 activate :deploy do |deploy|
+  deploy.build_before    = true
   deploy.deploy_method   = :ftp
   deploy.host            = 'markomasnjak.com'
   deploy.path            = '/markomasnjak.com'
   deploy.user            = 'marmas64'
+  deploy.password        = password
 end
