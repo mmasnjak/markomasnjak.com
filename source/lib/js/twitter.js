@@ -117,7 +117,7 @@
 
           for(var i = 0; i < data.length; i++) {
             _this.append(
-              html.replace('TWEET_TEXT', cleanTweet(data[i].text))
+              html.replace('TWEET_TEXT', data[i].text)
                   .replace(/USER/g, data[i].user.screen_name)
                   .replace('AGO', relativeTime(data[i].created_at))
                   .replace(/ID/g, data[i].id_str)
