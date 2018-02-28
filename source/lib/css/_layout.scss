@@ -52,6 +52,8 @@ $panel-size: 64rem;
 }
 
 .intro__footer-link {
+  @extend .link;
+
   margin-right: $spacer-xsmall;
 }
 

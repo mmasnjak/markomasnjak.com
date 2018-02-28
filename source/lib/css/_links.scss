@@ -1,0 +1,31 @@
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color $speed;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+.link {
+  display: inline-block;
+  position: relative;
+
+  &:after {
+    background-color: $color-primary;
+    bottom: 0.2rem;
+    content: "";
+    height: 0.08em;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity $speed, width $speed;
+    width: 0;
+  }
+
+  &:hover:after {
+    opacity: 1;
+    width: 100%;
+  }
+}
