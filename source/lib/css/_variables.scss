@@ -11,6 +11,7 @@ $text-caption-1: 400 1.2rem/2.4rem $font-family;
 $color-light-grey: #F8F8F8;
 $color-black-80: rgba(black, 0.80);
 $color-black-64: rgba(black, 0.64);
+$color-black-08: rgba(black, 0.08);
 $color-black-04: rgba(black, 0.04);
 
 $color-primary: #EA148C;
@@ -23,9 +24,8 @@ $spacer-large: 6.4rem;
 $spacer-xlarge: 12.8rem;
 
 $break-point-medium: 641px;
-$break-point-large: 1025px;
-$break-point-xlarge: 1441px;
-$break-point-max: 1650px;
+$break-point-large: 769px;
+$break-point-xlarge: 1025px;
+$break-point-max: 1441px;
 
-$bounce: cubic-bezier(0.680, -0.550, 0.265, 1.550);
 $speed: 200ms;

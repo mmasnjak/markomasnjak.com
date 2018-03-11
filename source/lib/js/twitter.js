@@ -92,14 +92,16 @@
 
       var html = '<div class="feed-item">' +
         '<a class="tweet" href="TWEET_URL" target="_blank">' +
-          '<div class="feed-item__icon">' +
-            '<img src="/lib/images/twitter.png" width="44" height="44"/>' +
-          '</div>' +
-          '<div class="feed-item__message" cite="TWEET_URL">' +
-            'TWEET_TEXT' +
-          '</div>' +
-          '<div class="feed-item__cite">' +
-            'AGO PLACE' +
+          '<div class="tweet__content">' +
+            '<div class="feed-item__icon">' +
+              '<img src="/lib/images/twitter.png" width="44" height="44"/>' +
+            '</div>' +
+            '<div class="feed-item__message" cite="TWEET_URL">' +
+              'TWEET_TEXT' +
+            '</div>' +
+            '<div class="feed-item__cite">' +
+              'AGO PLACE' +
+            '</div>' +
           '</div>' +
         '</a>' +
       '</div>';
@@ -129,15 +131,17 @@
         },
         error: function(e) {
           _this.empty().append(
-            '<div class="feed-item feed-item--error">' +
-              '<div class="feed-item__icon">' +
-                '<img src="/lib/images/twitter.png" width="44" height="44"/>' +
-              '</div>' +
-              '<div class="feed-item__message">' +
-                'Sorry, there was an error. Please try again later.' +
-              '</div>' +
-              '<div class="feed-item__cite">' +
-                '<a href="https://twitter.com/' + settings.user + '" target="_blank">Follow Me on Twitter</a>' +
+            '<div class="feed-item">' +
+              '<div class="feed-item__error">' +
+                '<div class="feed-item__icon">' +
+                  '<img src="/lib/images/twitter.png" width="44" height="44"/>' +
+                '</div>' +
+                '<div class="feed-item__message">' +
+                  'Sorry, there was an error. Please try again later.' +
+                '</div>' +
+                '<div class="feed-item__cite">' +
+                  '<a href="https://twitter.com/' + settings.user + '" target="_blank">Follow Me on Twitter</a>' +
+                '</div>' +
               '</div>' +
             '</div>'
           );
