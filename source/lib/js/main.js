@@ -8,7 +8,7 @@ $(document).ready(function() {
 
   $('.shots').dribbble({
     user : 'm_masnjak',
-    count : 10
+    count : 6
   });
 
   if (chuckNorris.length > 0) {

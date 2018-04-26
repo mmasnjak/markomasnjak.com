@@ -1,13 +1,12 @@
 @charset "utf-8";
 @import "bourbon";
-@import "normalize";
 @import "fonts";
 @import "variables";
 @import "mixins";
 
 @import "base";
-@import "button";
-@import "feed";
+@import "components/button";
+@import "components/feed";
+@import "components/grid";
+
 @import "layout";
-@import "links";
-@import "loader";

@@ -1,0 +1,65 @@
+.feed__footer {
+  margin-top: $spacer-small;
+  text-align: center;
+}
+
+.feed-item {
+  background-color: $color-light-grey;
+  border-radius: 0.8rem;
+  grid-column: span 12;
+  padding: $spacer-medium;
+  text-align: center;
+}
+
+.feed-item__icon {
+  margin-bottom: $spacer-xsmall;
+  margin-left: auto;
+  margin-right: auto;
+  width: 4.4rem;
+}
+
+.feed-item__message {
+  margin-bottom: $spacer-xsmall;
+}
+
+.feed-item__cite {
+  color: $color-black-64;
+  font: $caption1;
+}
+
+.shot {
+  border-radius: 0.4rem;
+  display: block;
+  overflow: hidden;
+  outline: none;
+}
+
+.tweet {
+  border-radius: 0.8rem;
+  display: block;
+  outline: none;
+  padding: $spacer-medium;
+  text-align: center;
+
+  &:focus,
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.tweet__content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 64rem;
+}
+
+.twtr-hyperlink {
+  color: $color-primary;
+}
+
+.tweet__follow-link {
+  margin-left: $spacer-xsmall;
+  margin-right: $spacer-xsmall;
+  white-space: nowrap;
+}

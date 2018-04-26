@@ -4,13 +4,14 @@
       user           : null,
       count          : 20,
       showLowProfile : false,
-      url            : 'http://markomasnjak.com/feeds/dribbble/'
+      url            : 'http://markomasnjak.com/feeds/dribbble/',
+      wrapperClass : 'grid__item'
     }, options);
 
     return this.each(function() {
       var _this = $(this);
 
-      var html = '<div class="feed-item feed-item--half">' +
+      var html = '<div class="' + settings.wrapperClass + '">' +
         '<a class="shot" href="SHOT_URL" target="_blank">' +
           '<img src="SHOT_IMG" title="SHOT_TITLE" />' +
         '</a>' +
@@ -40,16 +41,14 @@
         error: function(e) {
           _this.empty().append(
             '<div class="feed-item">' +
-              '<div class="feed-item__error">' +
-                '<div class="feed-item__icon">' +
-                  '<img src="/lib/images/dribbble.png" width="44" height="44"/>' +
-                '</div>' +
-                '<div class="feed-item__message">' +
-                  'Sorry, there was an error. Please try again later.' +
-                '</div>' +
-                '<div class="feed-item__cite">' +
-                  '<a href="https://dribbble.com/' + settings.user + '" target="_blank">See My Work on Dribbble</a>' +
-                '</div>' +
+              '<div class="feed-item__icon">' +
+                '<img src="/lib/images/dribbble.png" width="44" height="44"/>' +
+              '</div>' +
+              '<div class="feed-item__message">' +
+                'Sorry, there was an error. Please try again later.' +
+              '</div>' +
+              '<div class="feed-item__cite">' +
+                '<a href="https://dribbble.com/' + settings.user + '" target="_blank">See My Work on Dribbble</a>' +
               '</div>' +
             '</div>'
           );

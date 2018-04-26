@@ -4,6 +4,7 @@
       user  : null,
       count : 20,
       url   : 'http://markomasnjak.com/feeds/twitter/',
+      wrapperClass : ''
     }, options);
 
     function relativeTime(d) {
@@ -90,7 +91,7 @@
     return this.each(function() {
       var _this = $(this);
 
-      var html = '<div class="feed-item">' +
+      var html = '<div class="' + settings.wrapperClass + '">' +
         '<a class="tweet" href="TWEET_URL" target="_blank">' +
           '<div class="tweet__content">' +
             '<div class="feed-item__icon">' +

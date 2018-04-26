@@ -1,38 +1,23 @@
 $panel-size: 64rem;
 
-.intro {
-  color: black;
-  font: $text-body-2;
-  letter-spacing: -0.05rem;
-  padding: $spacer-medium;
+nav {
+  margin-bottom: $spacer-medium;
 
   @include medium-up {
-    border-bottom: 0.1rem solid $color-black-08;
-    font: $text-subtitle;
-    margin-bottom: $spacer-xlarge;
-    padding: 0 0 $spacer-xlarge 0;
+    margin-bottom: $spacer-large;
   }
 }
 
-.intro__header,
-.intro__content {
-  margin-bottom: $spacer-medium;
-  max-width: $panel-size;
+header {
+  font: $subtitle;
+  letter-spacing: -0.05rem;
 }
 
-.intro__footer {
-  color: $color-black-64;
-  font: $text-caption-1;
-}
-
-.intro__footer-link {
-  margin-right: $spacer-xsmall;
-}
-
-.content {
+main {
   margin-left: auto;
   margin-right: auto;
   max-width: 1600px;
+  padding: $spacer-medium;
 
   @include medium-up {
     padding: $spacer-large;
@@ -42,4 +27,40 @@ $panel-size: 64rem;
     padding-left: $spacer-xlarge;
     padding-right: $spacer-xlarge;
   }
+}
+
+.logo {
+  height: 4rem;
+  width: 4rem;
+}
+
+.border {
+  border-bottom: 0.1rem solid $color-black-08;
+  padding-bottom: $spacer-medium;
+  margin-bottom: $spacer-medium;
+
+  @include medium-up {
+    padding-bottom: $spacer-large;
+    margin-bottom: $spacer-large;
+  }
+}
+
+.content {
+  max-width: $panel-size;
+}
+
+.content__link {
+  color: $color-black-64;
+  font: $caption1;
+  margin-right: $spacer-xsmall;
+}
+
+.loading {
+  $size: 4.8rem;
+
+  background: url('/lib/images/loader.gif') center center no-repeat;
+  background-size: $size $size;
+  height: $size;
+  min-width: $size;
+  text-align: center;
 }

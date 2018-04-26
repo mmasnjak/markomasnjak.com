@@ -1,0 +1,13 @@
+.grid {
+  display: grid;
+  grid-gap: $spacer-xsmall;
+  grid-template-columns: repeat(12,1fr);
+}
+
+.grid__item {
+  grid-column: span 12;
+
+  @include medium-up {
+    grid-column: span 6;
+  }
+}
