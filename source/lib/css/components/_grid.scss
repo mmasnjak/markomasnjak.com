@@ -1,6 +1,6 @@
 .grid {
   display: grid;
-  grid-gap: $spacer-xsmall;
+  grid-gap: $spacer-small;
   grid-template-columns: repeat(12,1fr);
 }
 
@@ -9,5 +9,13 @@
 
   @include medium-up {
     grid-column: span 6;
+  }
+
+  @include large-up {
+    grid-column: span 4;
+  }
+
+  @include xlarge-up {
+    grid-column: span 3;
   }
 }

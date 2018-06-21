@@ -7,8 +7,8 @@ $(document).ready(function() {
   });
 
   $('.shots').dribbble({
-    user : 'm_masnjak',
-    count : 6
+    user : 'masnjak',
+    count : 12
   });
 
   if (chuckNorris.length > 0) {

@@ -1,5 +1,5 @@
 .feed__footer {
-  margin-top: $spacer-small;
+  margin-top: $spacer-medium;
   text-align: center;
 }
 
@@ -32,6 +32,14 @@
   display: block;
   overflow: hidden;
   outline: none;
+  transition: all 200ms;
+  box-shadow: 0 1.6rem 6.4rem $color-black-08;
+
+  &:focus,
+  &:hover {
+    transform: translateY(-$spacer-xsmall);
+    box-shadow: 0 1.6rem 3.2rem $color-black-08;
+  }
 }
 
 .tweet {

@@ -1,15 +1,16 @@
 .button {
   background-color: $color-black-04;
-  border-radius: 0.8rem;
-  color: $color-primary;
+  border-radius: 2.4rem;
+  color: black;
   display: inline-block;
-  font: $body1;
+  font: $body2;
   padding: $spacer-xsmall $spacer-medium;
   transition: color 200ms, transform 200ms;
 
   &:focus,
   &:hover {
     background-color: rgba($color-primary, 0.04);
+    color: $color-primary;
     text-decoration: none;
   }
 

@@ -23,19 +23,18 @@
         dataType: 'json',
         data: {
           'user' : settings.user,
-          'count' : settings.count
+          'count' : settings.count,
+          'low_profile' : settings.showLowProfile
         },
         success: function(data, textStatus, xhr) {
           _this.empty();
 
           for(var i = 0; i < data.length; i++) {
-            if(data[i].low_profile === settings.showLowProfile) {
-              _this.append(
-                html.replace('SHOT_IMG', data[i].images.hidpi)
-                    .replace('SHOT_URL', data[i].html_url)
-                    .replace(/SHOT_TITLE/g, data[i].title)
-              );
-            }
+            _this.append(
+              html.replace('SHOT_IMG', data[i].images.hidpi)
+                  .replace('SHOT_URL', data[i].html_url)
+                  .replace(/SHOT_TITLE/g, data[i].title)
+            );
           }
         },
         error: function(e) {
