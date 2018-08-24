@@ -1,23 +1,9 @@
 $(document).ready(function() {
-  var chuckNorris = $('#chuck-norris-joke');
+  const jokeContainer = $('.joke');
 
-  $('.tweets').twitter({
-    user : 'm_masnjak',
-    count : 1
-  });
-
-  $('.shots').dribbble({
-    user : 'masnjak',
-    count : 12
-  });
-
-  if (chuckNorris.length > 0) {
-    tellTheJoke(chuckNorris);
+  if(jokeContainer.length > 0) {
+    $.getJSON('https://api.icndb.com/jokes/random?exclude=[explicit]', function (data) {
+      jokeContainer.html(data.value.joke);
+    });
   }
 });
-
-function tellTheJoke(j) {
-  $.getJSON('https://api.icndb.com/jokes/random', function (data) {
-    j.html(data.value.joke);
-  });
-}

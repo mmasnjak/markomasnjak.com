@@ -12,10 +12,6 @@
   }
 
   @include large-up {
-    grid-column: span 4;
-  }
-
-  @include xlarge-up {
     grid-column: span 3;
   }
 }

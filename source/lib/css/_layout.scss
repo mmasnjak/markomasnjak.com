@@ -1,66 +1,153 @@
-$panel-size: 64rem;
-
-nav {
-  margin-bottom: $spacer-medium;
+html {
+  font-size: 62.5%;
 
   @include medium-up {
-    margin-bottom: $spacer-large;
+    font-size: 75%;
   }
 }
 
-header {
-  font: $subtitle;
-  letter-spacing: -0.05rem;
+body {
+  color: rgba(black, 0.88);
+  fill: rgba(black, 0.88);
+  font: $body1;
+  margin: 0;
+
+  &.night {
+    $color: rgba(white, 0.88);
+
+    background: #202020;
+    color: $color;
+    fill: $color;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  &.dusk {
+    background-color: #edf0f5;
+  }
+}
+
+h1 {
+  font: $display1;
+  letter-spacing: -0.1rem;
+  margin: 0;
+}
+
+p, ul, ol {
+  margin-top: 0;
+  margin-bottom: $spacer-small;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  border-bottom: 0.0625em solid transparent;
+  color: inherit;
+  text-decoration: none;
+  transition-duration: $speed;
+
+  &:focus,
+  &:hover {
+    border-color: $color-primary;
+    color: $color-primary;
+  }
 }
 
 main {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1600px;
-  padding: $spacer-medium;
+  max-width: 48rem;
+  padding: $spacer-large;
 
   @include medium-up {
-    padding: $spacer-large;
+    padding: $spacer-xlarge;
   }
+}
 
-  @include large-up {
-    padding-left: $spacer-xlarge;
-    padding-right: $spacer-xlarge;
-  }
+nav {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: fadeInDown;
+  margin-bottom: $spacer-large;
+  opacity: 0;
+}
+
+article {
+  animation-delay: 0.25s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: fadeInDown;
+  margin-bottom: $spacer-large;
+  opacity: 0;
+}
+
+header {
+  margin-bottom: $spacer-medium;
+}
+
+footer {
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-name: fadeInDown;
+  color: rgba(black, 0.64);
+  font: $caption1;
+  opacity: 0;
+}
+
+blockquote {
+  border-left: 0.2rem solid $black5;
+  color: $black2;
+  font-style: italic;
+  padding-left: $spacer-small;
+  margin: 0 0 $spacer-small 0;
+}
+
+svg {
+  display: block;
+}
+
+.primary-link {
+  color: $color-primary;
+  margin-right: $spacer-small;
 }
 
 .logo {
-  height: 4rem;
-  width: 4rem;
-}
+  $size: 40px;
 
-.border {
-  border-bottom: 0.1rem solid $color-black-08;
-  padding-bottom: $spacer-medium;
-  margin-bottom: $spacer-medium;
+  border: none;
+  display: block;
+  height: $size;
+  width: $size;
+  border-radius: 50%;
 
-  @include medium-up {
-    padding-bottom: $spacer-large;
-    margin-bottom: $spacer-large;
+  &:hover,
+  &:focus {
+    border: none;
+    fill: $color-primary;
+  }
+
+  &:active {
+    box-shadow: 0 0 0 0.8rem $color-accent;
   }
 }
 
-.content {
-  max-width: $panel-size;
+::-moz-selection {
+  background: $color-accent;
 }
 
-.content__link {
-  color: $color-black-64;
-  font: $caption1;
-  margin-right: $spacer-xsmall;
+::selection {
+  background: $color-accent;
 }
 
-.loading {
-  $size: 4.8rem;
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
 
-  background: url('/lib/images/loader.gif') center center no-repeat;
-  background-size: $size $size;
-  height: $size;
-  min-width: $size;
-  text-align: center;
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
